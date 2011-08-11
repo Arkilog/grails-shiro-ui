@@ -16,7 +16,7 @@ During installation, all templates (controllers, domain classes and views) are d
 *Admin user creation*
 
 Admin user creation can be done in the Bootstrap :
-'''Groovy
+```groovy
 import org.apache.shiro.crypto.hash.Sha256Hash
 
 class BootStrap {
@@ -39,7 +39,7 @@ username: 'admin', passwordHash: new Sha256Hash("changeit").toHex(),email:'someo
     def destroy = {
     }
 }
-'''
+```
 
 *Plugin RoadMap*
 
