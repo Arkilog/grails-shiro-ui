@@ -1,15 +1,22 @@
-This plugin tries to provide a basic user interface for shiro plugin.
+This plugin tries to provide a basic user interface for shiro plugin. It depends on the excellent shiro and mail plugins.
+
+*IMPORTANT NOTE : *The ShiroDBRealm is used in this plugin.
+
+*Installation* {code}grails install-plugin http://cloud.github.com/downloads/yellowsnow/Grails-Shiro-UI/grails-shiro-ui-1.0-beta2.zip{code}
 
 It provides the following features :
 
 * User and Role management frontends with basic permission configuration : ${appName}/shiroUser/ and ${appName}/shiroRole/ 
 * Password recovery via email : ${appName}/auth/lostPassword
 * Password update : ${appName}/auth/updatePassword
+* User creation by priviliged user with temporary password sent by email (password update is requested on log on)
 
 During installation, all templates (controllers, domain classes and views) are directly copied to the project.
 
-Default user creation can be done in the Bootstrap :
-{code}
+*Admin user creation*
+
+Admin user creation can be done in the Bootstrap :
+'''Groovy
 import org.apache.shiro.crypto.hash.Sha256Hash
 
 class BootStrap {
@@ -32,9 +39,9 @@ username: 'admin', passwordHash: new Sha256Hash("changeit").toHex(),email:'someo
     def destroy = {
     }
 }
-{code}
+'''
 
-RoadMap
+*Plugin RoadMap*
 
 * Allow custom permissions such as "book:buy,sell:1,2"
 * External mail templates (now hardcoded in controller)
