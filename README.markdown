@@ -1,6 +1,6 @@
 This plugin tries to provide a basic user interface for shiro plugin. It depends on the excellent shiro and mail plugins.
 
-*IMPORTANT NOTE : *The ShiroDBRealm is used in this plugin.
+*IMPORTANT NOTE :* The ShiroDBRealm is used in this plugin.
 
 *Installation* {code}grails install-plugin http://cloud.github.com/downloads/yellowsnow/Grails-Shiro-UI/grails-shiro-ui-1.0-beta2.zip{code}
 
@@ -16,7 +16,7 @@ During installation, all templates (controllers, domain classes and views) are d
 *Admin user creation*
 
 Admin user creation can be done in the Bootstrap :
-'''Groovy
+'''groovy
 import org.apache.shiro.crypto.hash.Sha256Hash
 
 class BootStrap {
