@@ -1,0 +1,40 @@
+<plugin name='shiro-ui' version='1.0-beta' grailsVersion='1.3.7 &gt; *'>
+  <author>Yellowsnow</author>
+  <title>A basic Shiro User Interface</title>
+  <description>\
+This plugin tries to provide a basic user interface for shiro plugin.
+
+It provides the following features :
+ * User and Role management frontends with basic permission configuration
+ * Password recovery via email
+ * Password update
+ * Default admin user
+ 
+RoadMap
+ * User sign-up
+ * Allow custom permissions such as "book:buy,sell:1,2"
+ * Email templates
+ 
+</description>
+  <documentation>http://grails.org/plugin/shiro-ui</documentation>
+  <resources>
+    <resource>BuildConfig</resource>
+    <resource>Config</resource>
+    <resource>DataSource</resource>
+    <resource>ShiroSecurityFilters</resource>
+    <resource>UrlMappings</resource>
+    <resource>AuthController</resource>
+    <resource>ShiroRoleController</resource>
+    <resource>ShiroUserController</resource>
+    <resource>ShiroPasswordResetRequest</resource>
+    <resource>ShiroRole</resource>
+    <resource>ShiroUser</resource>
+    <resource>ShiroDbRealm</resource>
+    <resource>ShiroUITagLib</resource>
+  </resources>
+  <dependencies>
+    <plugin name='shiro' version='1.1.3 &gt; *' />
+    <plugin name='mail' version='1.0-SNAPSHOT &gt; *' />
+  </dependencies>
+  <behavior />
+</plugin>
