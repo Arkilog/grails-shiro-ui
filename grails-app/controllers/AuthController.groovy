@@ -163,7 +163,7 @@ class AuthController {
 			   to shiroUserInstance.email
 			   from mailSender
 			   subject "Reset your password"
-			   body "Hello ${shiroUserInstance.firstName} ${shiroUserInstance.lastName},\n\nYou have requested resetting your password. please ignore this message, if it's not you who have requested it.\n\nIn order to reset your password, please follow this link :\n\n ${createLink(absolute:true,controller:'auth',action:'resetPassword',id:resetRequest.token)}\n\nBest Regards".toString()
+			   body "Hello ${shiroUserInstance.firstName} ${shiroUserInstance.lastName},\n\nYou have requested resetting your password. Please ignore this message if it's not you who have made the request.\n\nIn order to reset your password, please follow this link :\n\n ${createLink(absolute:true,controller:'auth',action:'resetPassword',id:resetRequest.token)}\n\nBest Regards".toString()
 			}
 			redirect(uri:'/')
 		} else {

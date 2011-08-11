@@ -13,7 +13,7 @@ class ShiroUser {
 	def beforeUpdate = {
 	   lastUpdated = new Date()
 	}
-   boolean passwordChangeRequiredOnNextLogon = true
+   boolean passwordChangeRequiredOnNextLogon
     static hasMany = [ roles: ShiroRole, permissions: String ]
 
     static constraints = {
