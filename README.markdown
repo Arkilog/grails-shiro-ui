@@ -2,7 +2,7 @@ This plugin tries to provide a basic user interface for shiro plugin. It depends
 
 *IMPORTANT NOTE :* The ShiroDBRealm is used in this plugin.
 
-*Installation* {code}grails install-plugin http://cloud.github.com/downloads/yellowsnow/Grails-Shiro-UI/grails-shiro-ui-1.0-beta2.zip{code}
+*Installation* ```grails install-plugin http://cloud.github.com/downloads/yellowsnow/Grails-Shiro-UI/grails-shiro-ui-1.0-beta2.zip```
 
 It provides the following features :
 
