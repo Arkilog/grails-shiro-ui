@@ -4,9 +4,9 @@ This plugin tries to provide a basic user interface for shiro plugin. It depends
 
 *Installation* 
 
-```grails install-plugin http://cloud.github.com/downloads/yellowsnow/Grails-Shiro-UI/grails-shiro-ui-1.0-beta2.zip```
+```grails install-plugin http://cloud.github.com/downloads/yellowsnow/grails-shiro-ui/grails-shiro-ui-1.0-beta2.zip```
 
-It provides the following features :
+*Feature summary*
 
 * User and Role management frontends with basic permission configuration : ${appName}/shiroUser/ and ${appName}/shiroRole/ 
 * Password recovery via email : ${appName}/auth/lostPassword
