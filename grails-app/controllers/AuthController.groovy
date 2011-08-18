@@ -100,6 +100,7 @@ class AuthController {
 			def user = resetRequest?.user ?: (connectedUser ? ShiroUser.findByUsername(connectedUser) : null)
 			if (user) {
 				user.passwordHash = new Sha256Hash(params.password1).toHex()
+				user.passwordChangeRequiredOnNextLogon = false
 				if (user.save()){
 					resetRequest?.delete()
 					flash.message = "Password successfully updated"

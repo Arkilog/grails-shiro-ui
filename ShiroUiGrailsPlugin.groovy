@@ -1,6 +1,6 @@
 class ShiroUiGrailsPlugin {
     // the plugin version
-    def version = "1.0-beta3"
+    def version = "1.0-beta4"
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "1.3 > *"
     // the other plugins this plugin depends on
