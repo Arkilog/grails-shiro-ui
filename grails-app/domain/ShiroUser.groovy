@@ -1,11 +1,19 @@
 class ShiroUser {
+
     String firstName
+
     String lastName
+
     String username
+
     String passwordHash
+
 	String email
+
 	String additionalInfo
+
 	Date dateCreated
+
 	Date lastUpdated
 
     Boolean passwordChangeRequiredOnNextLogon = false
@@ -15,9 +23,10 @@ class ShiroUser {
     static constraints = {
         firstName(nullable: false, blank: false)
         lastName(nullable: false, blank: false)
-        username(unique: true,nullable: false, blank: false, size: 5..20)
-        email(unique: true,email: true)
+        username(unique: true, nullable: false, blank: false, size: 5..20)
+        email(unique: true, email: true)
         additionalInfo(nullable: true)
+        passwordHash(nullable: false, maxSize: 64, bindable: false)
         passwordChangeRequiredOnNextLogon(nullable: true)
     }
 
@@ -31,4 +40,5 @@ class ShiroUser {
 	String toString(){
         username
     }
+
 }
