@@ -3,14 +3,9 @@ class ShiroRole {
 	String description
 	Date dateCreated
 	Date lastUpdated
-	def beforeInsert = {
-	   dateCreated = new Date()
-	}
-	def beforeUpdate = {
-	   lastUpdated = new Date()
-	}
 
     static hasMany = [ users: ShiroUser, permissions: String ]
+
     static belongsTo = ShiroUser
 
     static constraints = {
@@ -24,5 +19,8 @@ class ShiroRole {
 		cache permissions : true
 	}
 
-	String toString(){name}
+    @Override
+	String toString(){
+        name
+    }
 }
