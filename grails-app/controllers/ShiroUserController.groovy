@@ -5,6 +5,9 @@ import java.security.SecureRandom
 class ShiroUserController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
+
+    def mailService
+
     def index = {
         redirect(action: "list", params: params)
     }
@@ -32,7 +35,7 @@ class ShiroUserController {
             render(view: "create", model: [shiroUserInstance: shiroUserInstance])
             return
         }
-		sendMail {
+        mailService.sendMail {
 		   to shiroUserInstance.email
 		   from grailsApplication.config.grails.mail.username
 		   subject "Your account was successfully created!"
