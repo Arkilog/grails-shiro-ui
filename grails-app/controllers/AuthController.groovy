@@ -9,6 +9,8 @@ import org.apache.shiro.crypto.hash.Sha256Hash
 class AuthController {
     def shiroSecurityManager
 
+    def mailService
+
     def index = { redirect(action: "login", params: params) }
 
     def login = {
@@ -159,10 +161,8 @@ class AuthController {
 		if (shiroUserInstance) {
 			flash.message = "An email is being sent to you with instructions on how to reset your password."
 			def resetRequest = new ShiroPasswordResetRequest(user:shiroUserInstance,requestDate : new Date(),token:new BigInteger(130, new SecureRandom()).toString(32)).save(failOnError:true)
-			def mailSender = grailsApplication.config.grails.mail.username
-			sendMail {
+            mailService.sendMail {
 			   to shiroUserInstance.email
-			   from mailSender
 			   subject "Reset your password"
 			   body "Hello ${shiroUserInstance.firstName} ${shiroUserInstance.lastName},\n\nYou have requested resetting your password. Please ignore this message if it's not you who have made the request.\n\nIn order to reset your password, please follow this link :\n\n ${createLink(absolute:true,controller:'auth',action:'resetPassword',id:resetRequest.token)}\n\nBest Regards".toString()
 			}
