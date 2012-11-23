@@ -83,16 +83,6 @@
                                 </td>
                             </tr>
                         
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="additionalInfo"><g:message code="shiroUser.additionalInfo.label" default="Additional Info" /></label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean: shiroUserInstance, field: 'additionalInfo', 'errors')}">
-                                    <g:textArea name="additionalInfo" value="${shiroUserInstance?.additionalInfo}"/>
-                                </td>
-                            </tr>
-                        
-                        
                         </tbody>
                     </table>
                 </div>

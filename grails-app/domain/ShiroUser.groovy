@@ -10,8 +10,6 @@ class ShiroUser {
 
 	String email
 
-	String additionalInfo
-
 	Date dateCreated
 
 	Date lastUpdated
@@ -25,7 +23,6 @@ class ShiroUser {
         lastName(nullable: false, blank: false)
         username(unique: true, nullable: false, blank: false, size: 5..20)
         email(unique: true, email: true)
-        additionalInfo(nullable: true)
         passwordHash(nullable: false, maxSize: 64, bindable: false)
         passwordChangeRequiredOnNextLogon(nullable: true)
     }

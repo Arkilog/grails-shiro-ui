@@ -74,13 +74,6 @@
                             
                         </tr>
                     
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="shiroUser.additionalInfo.label" default="Additional Info" /></td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean: shiroUserInstance, field: "additionalInfo")}</td>
-                            
-                        </tr>
-                    
                     </tbody>
                 </table>
             </div>
