@@ -17,7 +17,7 @@
 			<g:form action="doResetPassword" >
 				<fieldset class="form">
 					<div class="fieldcontain">
-						Hi ${resetRequest?.user.username}, please update your password here :<br/><br/>
+						Hi ${resetRequest?.user?.username ?: ""}, please update your password here :<br/><br/>
 					</div>
 					<div class="fieldcontain required">
 						<label for="password1">

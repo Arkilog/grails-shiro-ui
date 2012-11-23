@@ -21,4 +21,6 @@ log4j = {
            'net.sf.ehcache.hibernate'
 
     warn   'org.mortbay.log'
+    debug   'org.apache.shiro'
 }
+grails.config.locations = ["file:${userHome}/.grails/shiro-ui.groovy"]

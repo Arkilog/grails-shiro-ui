@@ -51,6 +51,7 @@ class AuthController {
 			}
         }
         catch (AuthenticationException ex){
+        	ex.printStackTrace()
             // Authentication failed, so display the appropriate message
             // on the login page.
             log.info "Authentication failure for user '${params.username}'."

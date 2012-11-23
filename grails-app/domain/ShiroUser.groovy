@@ -23,7 +23,7 @@ class ShiroUser {
         lastName(nullable: false, blank: false)
         username(unique: true, nullable: false, blank: false, size: 5..20)
         email(unique: true, email: true)
-        passwordHash(nullable: false, maxSize: 64, bindable: false)
+        passwordHash(nullable: false, display:false)
         passwordChangeRequiredOnNextLogon(nullable: true)
     }
 
