@@ -1,6 +1,6 @@
 includeTargets << grailsScript("_GrailsInit")
 
-target(main: "Installs shiro domain classes, controllers, realms and views") {
+target(main: "Installs shiro domain classes, controllers, DB realm and plugin views") {
 	ant.copy(todir: "grails-app/domain/") {
 		fileset(dir: "${shiroUiPluginDir}/grails-app/domain/")
 	}
