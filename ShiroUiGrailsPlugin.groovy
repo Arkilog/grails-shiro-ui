@@ -1,8 +1,8 @@
 class ShiroUiGrailsPlugin {
     // the plugin version
-    def version = "2.0.0-SNAPSHOT"
+    def version = "1.2.0-SNAPSHOT"
     // the version or versions of Grails the plugin is designed for
-    def grailsVersion = "2.1 > *"
+    def grailsVersion = "2.0 > *"
     // the other plugins this plugin depends on
     def dependsOn = [shiro:'1.1.4 > *', mail: '1.0.1 > *']
     // resources that are excluded from plugin packaging
@@ -12,7 +12,10 @@ class ShiroUiGrailsPlugin {
 
     // TODO Fill in these fields
     def author = "Yellowsnow"
-    def authorEmail = ""
+    def license = 'APACHE'
+    def organization = [name: 'Arkilog', url: 'http://www.arkilog.ma/']
+    def scm = [url: 'https://github.com/yellowsnow/grails-shiro-ui']
+    def authorEmail = "contact@arkilog.ma"
     def title = "A basic Shiro User Interface"
     def description = '''\\
 This plugin tries to provide a basic user interface for shiro plugin.
