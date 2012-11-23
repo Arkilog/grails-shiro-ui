@@ -1,0 +1,4 @@
+Command line :
+{code}grails shiro-ui-quick-start{code}
+
+Installs shiro domain classes, controllers, DB realm and plugin views

@@ -19,8 +19,6 @@ Installs shiro domain classes, controllers, DB realm and plugin views :
 * Password update : ${appName}/auth/updatePassword
 * User creation by priviliged user with temporary password sent by email (password update is requested on log on)
 
-During installation, all templates (controllers, domain classes and views) are directly copied to the project.
-
 *Admin user creation*
 
 Admin user creation can be done in the Bootstrap :

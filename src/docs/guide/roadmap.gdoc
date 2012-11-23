@@ -1,0 +1,4 @@
+* Allow custom permissions such as "book:buy,sell:1,2"
+* External mail templates (now hardcoded in controller)
+* User sign-up with admin approval
+* Better documentation

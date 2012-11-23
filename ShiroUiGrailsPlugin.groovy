@@ -11,26 +11,14 @@ class ShiroUiGrailsPlugin {
     ]
 
     // TODO Fill in these fields
-    def author = "Yellowsnow"
+    def author = "Arkilog"
     def license = 'APACHE'
     def organization = [name: 'Arkilog', url: 'http://www.arkilog.ma/']
-    def scm = [url: 'https://github.com/yellowsnow/grails-shiro-ui']
+    def scm = [url: 'https://github.com/Arkilog/grails-shiro-ui']
     def authorEmail = "contact@arkilog.ma"
     def title = "A basic Shiro User Interface"
-    def description = '''\\
-This plugin tries to provide a basic user interface for shiro plugin.
-
-It provides the following features :
- * User and Role management frontends with basic permission configuration
- * Password recovery via email
- * Password update
- * Default admin user
- 
-RoadMap
- * User sign-up
- * Allow custom permissions such as "book:buy,sell:1,2"
- * Email templates
- 
+    def description = '''
+Grails Shiro UI Plugin Provides a basic user interface for shiro plugin.
 '''
 
     // URL to the plugin's documentation

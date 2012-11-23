@@ -1,0 +1,5 @@
+* User and Role management frontends with basic permission configuration : ${appName}/shiroUser/ and ${appName}/shiroRole/ 
+* Password recovery via email : ${appName}/auth/lostPassword
+* Password update : ${appName}/auth/updatePassword
+* User creation by priviliged user with temporary password sent by email (password update is requested on log on)
+
