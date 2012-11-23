@@ -1,10 +1,10 @@
 class ShiroUiGrailsPlugin {
     // the plugin version
-    def version = "1.0-beta4"
+    def version = "2.0.0-SNAPSHOT"
     // the version or versions of Grails the plugin is designed for
-    def grailsVersion = "1.3 > *"
+    def grailsVersion = "2.1 > *"
     // the other plugins this plugin depends on
-    def dependsOn = [shiro:'1.1.3 > *', mail: '1.0-SNAPSHOT > *']
+    def dependsOn = [shiro:'1.1.4 > *', mail: '1.0.1 > *']
     // resources that are excluded from plugin packaging
     def pluginExcludes = [
             "grails-app/views/error.gsp"

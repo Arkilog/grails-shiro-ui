@@ -23,4 +23,3 @@ ant.copy(todir: "grails-app/views/") {
 		exclude(name:'**/main.gsp')
 	}
 }
-ant.copy(todir: "grails-app/conf/", file:"${shiroUiPluginDir}/grails-app/conf/ShiroSecurityFilters.groovy")
