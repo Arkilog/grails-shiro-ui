@@ -52,6 +52,13 @@ username: 'admin', email:"me@the.internet")
 
 * Allow custom permissions such as "book:buy,sell:1,2"
 * External mail templates (now hardcoded in controller)
-* Script to manually install templates
 * User sign-up with admin approval
 * Better documentation
+
+*License*
+
+Licensed under the Apache License, Version 2.0.
+
+*Contributing*
+
+Contributions are welcome : comments, ideas, issues and of course pull requests.
