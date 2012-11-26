@@ -3,3 +3,8 @@ target/
 web-app/
 *.log
 .settings/
+grails-app/views/error.gsp
+plugin.xml
+scripts/_Install.groovy
+scripts/_Uninstall.groovy
+scripts/_Upgrade.groovy
