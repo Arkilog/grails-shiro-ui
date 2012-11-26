@@ -28,7 +28,7 @@
                 <div class="dialog">
                     <table>
                         <tbody>
-                        
+
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="firstName"><g:message code="shiroUser.firstName.label" default="First Name" /></label>
@@ -37,7 +37,7 @@
                                     <g:textField name="firstName" value="${shiroUserInstance?.firstName}" />
                                 </td>
                             </tr>
-                        
+
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="lastName"><g:message code="shiroUser.lastName.label" default="Last Name" /></label>
@@ -46,7 +46,7 @@
                                     <g:textField name="lastName" value="${shiroUserInstance?.lastName}" />
                                 </td>
                             </tr>
-                        
+
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="username"><g:message code="shiroUser.username.label" default="Username" /></label>
@@ -55,7 +55,7 @@
                                     <g:textField name="username" maxlength="20" value="${shiroUserInstance?.username}" />
                                 </td>
                             </tr>
-                        
+
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="email"><g:message code="shiroUser.email.label" default="Email" /></label>
@@ -64,7 +64,7 @@
                                     <g:textField name="email" value="${shiroUserInstance?.email}" />
                                 </td>
                             </tr>
-                        
+
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="roles"><g:message code="shiroUser.roles.label" default="Roles" /></label>
@@ -73,7 +73,7 @@
                                     <shiroui:roleSelect name="roles" size="10" value="${shiroUserInstance?.roles}"/>
                                 </td>
                             </tr>
-                        
+
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="permissions"><g:message code="shiroUser.permissions.label" default="Permissions" /></label>
@@ -82,7 +82,7 @@
                                     <shiroui:permissionSelect name="permissions" size="10" value="${shiroUserInstance?.permissions}"/>
                                 </td>
                             </tr>
-                        
+
                         </tbody>
                     </table>
                 </div>

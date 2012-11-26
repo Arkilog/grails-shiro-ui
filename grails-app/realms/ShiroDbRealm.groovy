@@ -2,10 +2,12 @@ import org.apache.shiro.authc.AccountException
 import org.apache.shiro.authc.IncorrectCredentialsException
 import org.apache.shiro.authc.UnknownAccountException
 import org.apache.shiro.authc.SimpleAccount
+import org.apache.shiro.authc.UsernamePasswordToken
 import org.apache.shiro.authz.permission.WildcardPermission
 
 class ShiroDbRealm {
-    static authTokenClass = org.apache.shiro.authc.UsernamePasswordToken
+
+    static authTokenClass = UsernamePasswordToken
 
     def credentialMatcher
     def shiroPermissionResolver

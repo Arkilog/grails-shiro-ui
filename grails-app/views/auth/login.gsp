@@ -39,7 +39,6 @@
 			<div><br/>
 				<g:submitButton name="signIn" value="${message(code: 'default.button.signIn.label', default: 'Sign In')}" />
 				<br/><br/><br/><g:link action="lostPassword"><g:message code="default.lostPassword.label" default="I have lost my password" /></g:link>
-				
 			</div>
 	</fieldset>
   </g:form>
