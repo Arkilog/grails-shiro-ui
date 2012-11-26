@@ -1,5 +1,7 @@
-{code}grails install-plugin shiro-ui{code}
- 
- or as a dependency
+as a dependency
 
 {code}:compile:shiro-ui:1.1.4{code}
+ 
+or using install-plugin
+
+{code}grails install-plugin shiro-ui{code}

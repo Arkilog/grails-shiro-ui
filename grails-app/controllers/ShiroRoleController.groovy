@@ -4,20 +4,20 @@ class ShiroRoleController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
-    def index = {
+    def index() {
         redirect(action: "list", params: params)
     }
 
-    def list = {
+    def list() {
         params.max = Math.min(params.max ? params.int('max') : 10, 100)
         [shiroRoleInstanceList: ShiroRole.list(params), shiroRoleInstanceTotal: ShiroRole.count()]
     }
 
-    def create = {
+    def create() {
         [shiroRoleInstance: new ShiroRole(params)]
     }
 
-    def save = {
+    def save() {
         def shiroRoleInstance = new ShiroRole(params)
         if (!shiroRoleInstance.save(flush: true)) {
             render(view: "create", model: [shiroRoleInstance: shiroRoleInstance])
@@ -28,7 +28,7 @@ class ShiroRoleController {
         redirect(action: "show", id: shiroRoleInstance.id)
     }
 
-    def show = {
+    def show() {
         def shiroRoleInstance = ShiroRole.get(params.id)
         if (!shiroRoleInstance) {
 			flash.message = message(code: 'default.not.found.message', args: [message(code: 'shiroRole.label', default: 'ShiroRole'), params.id])
@@ -39,7 +39,7 @@ class ShiroRoleController {
         [shiroRoleInstance: shiroRoleInstance]
     }
 
-    def edit = {
+    def edit() {
         def shiroRoleInstance = ShiroRole.get(params.id)
         if (!shiroRoleInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'shiroRole.label', default: 'ShiroRole'), params.id])
@@ -50,7 +50,7 @@ class ShiroRoleController {
         [shiroRoleInstance: shiroRoleInstance]
     }
 
-    def update = {
+    def update() {
         def shiroRoleInstance = ShiroRole.get(params.id)
         if (!shiroRoleInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'shiroRole.label', default: 'ShiroRole'), params.id])
@@ -80,7 +80,7 @@ class ShiroRoleController {
         redirect(action: "show", id: shiroRoleInstance.id)
     }
 
-    def delete = {
+    def delete() {
         def shiroRoleInstance = ShiroRole.get(params.id)
         if (!shiroRoleInstance) {
 			flash.message = message(code: 'default.not.found.message', args: [message(code: 'shiroRole.label', default: 'ShiroRole'), params.id])

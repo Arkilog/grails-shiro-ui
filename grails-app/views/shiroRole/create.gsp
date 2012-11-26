@@ -25,7 +25,7 @@
                 <div class="dialog">
                     <table>
                         <tbody>
-                        
+
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="name"><g:message code="shiroRole.name.label" default="Name" /></label>
@@ -34,7 +34,7 @@
                                     <g:textField name="name" value="${shiroRoleInstance?.name}" />
                                 </td>
                             </tr>
-                        
+
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="roles"><g:message code="shiroUser.users.label" default="Users" /></label>
@@ -43,7 +43,7 @@
                                     <shiroui:userSelect name="users" size="10" value="${shiroRoleInstance?.users}"/>
                                 </td>
                             </tr>
-                        
+
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="permissions"><g:message code="shiroUser.permissions.label" default="Permissions" /></label>
@@ -61,7 +61,7 @@
                                     <g:textArea name="description" value="${shiroRoleInstance?.description}" />
                                 </td>
                             </tr>
-                        
+
                         </tbody>
                     </table>
                 </div>

@@ -1,2 +1,5 @@
 *.zip
-target/*
+target/
+web-app/
+*.log
+.settings/
