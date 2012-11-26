@@ -3,6 +3,7 @@ class ShiroUiGrailsPlugin {
     def grailsVersion = "2.0 > *"
     def author = "Arkilog"
     def license = 'APACHE'
+    def loadAfter = ['shiro','mail']
     def organization = [name: 'Arkilog', url: 'http://www.arkilog.ma/']
     def scm = [url: 'https://github.com/Arkilog/grails-shiro-ui']
     def authorEmail = "contact@arkilog.ma"
