@@ -20,28 +20,25 @@
             <div class="dialog">
                 <table>
                     <tbody>
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="shiroRole.name.label" default="Name" /></td>
-                            
                             <td valign="top" class="value">${fieldValue(bean: shiroRoleInstance, field: "name")}</td>
-                            
                         </tr>
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="shiroUser.permissions.label" default="Permissions" /></td>
-                            
                             <td valign="top" class="value">
-						<g:each in="${shiroRoleInstance.permissions}" var="permission">
-						<ul><li>${permission?.encodeAsHTML()}</li></ul>
-						</g:each>
-							</td>
-                            
+                        <g:each in="${shiroRoleInstance.permissions}" var="permission">
+                        <ul><li>${permission?.encodeAsHTML()}</li></ul>
+                        </g:each>
+                            </td>
+
                         </tr>
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="shiroRole.users.label" default="Users" /></td>
-                            
+
                             <td valign="top" style="text-align: left;" class="value">
                                 <ul>
                                 <g:each in="${shiroRoleInstance.users}" var="u">
@@ -49,14 +46,12 @@
                                 </g:each>
                                 </ul>
                             </td>
-                            
+
                         </tr>
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="shiroUser.description.label" default="Description" /></td>
-                            
                             <td valign="top" class="value">${fieldValue(bean: shiroRoleInstance, field: "description")}</td>
-                            
                         </tr>
 
                     </tbody>

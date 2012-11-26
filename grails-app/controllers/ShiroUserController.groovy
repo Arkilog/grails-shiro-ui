@@ -8,20 +8,20 @@ class ShiroUserController {
 
     def mailService
 
-    def index = {
+    def index() {
         redirect(action: "list", params: params)
     }
 
-    def list = {
+    def list() {
         params.max = Math.min(params.max ? params.int('max') : 10, 100)
         [shiroUserInstanceList: ShiroUser.list(params), shiroUserInstanceTotal: ShiroUser.count()]
     }
 
-    def create = {
+    def create() {
         [shiroUserInstance: new ShiroUser(params)]
     }
 
-    def save = {
+    def save() {
 		if (!grailsApplication.config.grails.mail.username) {
 			throw new RuntimeException(message(code: 'mail.plugin.not.configured', 'default' : 'Mail plugin not configured'))
 		}
@@ -44,7 +44,7 @@ class ShiroUserController {
         redirect(action: "show", id: shiroUserInstance.id)
     }
 
-    def show = {
+    def show() {
         def shiroUserInstance = ShiroUser.get(params.id)
         if (!shiroUserInstance) {
 			flash.message = message(code: 'default.not.found.message', args: [message(code: 'shiroUser.label', default: 'ShiroUser'), params.id])
@@ -55,7 +55,7 @@ class ShiroUserController {
         [shiroUserInstance: shiroUserInstance]
     }
 
-    def edit = {
+    def edit() {
         def shiroUserInstance = ShiroUser.get(params.id)
         if (!shiroUserInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'shiroUser.label', default: 'ShiroUser'), params.id])
@@ -66,7 +66,7 @@ class ShiroUserController {
         [shiroUserInstance: shiroUserInstance]
     }
 
-    def update = {
+    def update() {
         def shiroUserInstance = ShiroUser.get(params.id)
         if (!shiroUserInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'shiroUser.label', default: 'ShiroUser'), params.id])
@@ -96,7 +96,7 @@ class ShiroUserController {
         redirect(action: "show", id: shiroUserInstance.id)
     }
 
-    def delete = {
+    def delete() {
         def shiroUserInstance = ShiroUser.get(params.id)
         if (!shiroUserInstance) {
 			flash.message = message(code: 'default.not.found.message', args: [message(code: 'shiroUser.label', default: 'ShiroUser'), params.id])

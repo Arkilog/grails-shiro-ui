@@ -20,29 +20,19 @@
                 <table>
                     <thead>
                         <tr>
-                        
                             <g:sortableColumn property="id" title="${message(code: 'shiroRole.id.label', default: 'Id')}" />
-                        
                             <g:sortableColumn property="name" title="${message(code: 'shiroRole.name.label', default: 'Name')}" />
-                        
                             <th>${message(code: 'shiroUser.users.label', default: 'Users')}</th>
-                        
                             <th>${message(code: 'shiroUser.permissions.label', default: 'Permissions')}</th>
-                        
                         </tr>
                     </thead>
                     <tbody>
                     <g:each in="${shiroRoleInstanceList}" status="i" var="shiroRoleInstance">
                         <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
-                        
                             <td><g:link action="show" id="${shiroRoleInstance.id}">${fieldValue(bean: shiroRoleInstance, field: "id")}</g:link></td>
-                        
                             <td>${fieldValue(bean: shiroRoleInstance, field: "name")}</td>
-                        
-							<td>${fieldValue(bean: shiroRoleInstance, field: "users")}</td>
-							
-							<td>${fieldValue(bean: shiroRoleInstance, field: "permissions")}</td>
-                        
+                            <td>${fieldValue(bean: shiroRoleInstance, field: "users")}</td>
+                            <td>${fieldValue(bean: shiroRoleInstance, field: "permissions")}</td>
                         </tr>
                     </g:each>
                     </tbody>
